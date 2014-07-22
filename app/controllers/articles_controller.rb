@@ -17,4 +17,20 @@ class ArticlesController < ApplicationController
     @article = Article.find(params[:id])
     respond_with @article
   end
+
+  def create
+    @article = Article.new(article_params)
+
+    if @article.save
+      respond_with(@article)
+    else
+      respond_with(@article.errors)
+    end
+  end
+
+  private
+
+  def article_params
+    params.require(:article).permit(:title, :body)
+  end
 end

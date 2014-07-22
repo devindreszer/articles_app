@@ -57,6 +57,9 @@ Blog.ArticleList = {
       $body = $form.find("input[name='body']"),
       newArticle = { article: { title: $title.val(), body: $body.val() }};
 
+    $title.val("");
+    $body.val("");
+
     event.preventDefault();
     $.ajax({
       url: "http://localhost:3000/articles",
