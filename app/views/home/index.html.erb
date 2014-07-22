@@ -1,4 +1,16 @@
-<button id="get-articles">Get Articles</button>
-
-<ul id="articles">
-</ul>
+<h3>Article Blog Ajax Get</h3>
+<!-- Ajax Loading Spinner-->
+<div id="ajaxSpinnerContainer" class='centered'>
+  <img src="images/ajax-loader.gif" id="ajaxSpinnerImage" title="working...\">
+</div>
+<form id='new-article' action='http://localhost:3000/articles'>
+  <input type='text' name='title'placeholder="Enter new title">
+    <input type='textarea' name='body' placeholder="Enter new contents">
+    <input type='submit' value='Create Article'>
+  </form>
+<div id='container'>
+  <button id='get-articles'>Get Articles</button>
+  <div id='article-count'></div>
+  <ul id='articles'>Articles
+  </ul>
+</div>
